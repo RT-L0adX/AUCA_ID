@@ -1,19 +1,27 @@
-## Getting Started
+ISHIMWE ALAIN 28422
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+AUCA_ID - School Management System
 
-## Folder Structure
+Console-based Java application that manages departments, students, teachers, administrators, courses, classrooms, enrollments, assessments, fee payments, library books and book loans.
 
-The workspace contains two folders by default, where:
+Run (Java 21, Windows PowerShell)
+From the project root:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+    javac -d bin (Get-ChildItem src -Recurse -Filter *.java).FullName
+    java -cp bin com.auca.main.Main
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+ Structure (`src/com/auca`)
+- `interfaces` - `IdentifiabLe`, Registrable
+- `abstracts` - `Person`, `AcademicMember`
+- `student`, `teacher`, `administrator`, `department`, `course`, `classroom`, `enrollment`, `assessment`, `feepayment`, `librarybook`, `bookloan` - one concrete class each
+- `exceptions` - 5 custom exceptions
+- `main` - `Main` (menu and smart forms)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+ Features
+- 19-option menu: register, enroll, assess, pay, borrow/return books, view, search, update, reports
+- Guided multi-step forms with BACK / CANCEL, review and edit before saving
+- Pick existing records from numbered lists, with nested "register it now" and resume
+- Validation, duplicate detection, safe recovery from errors
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-AUCA_ID - OOP school management project
+ OOP concepts shown
+Encapsulation, multilevel and hierarchical inheritance, interfaces, abstract classes, polymorphism, constructor chaining, method overriding, custom exceptions.
